@@ -16,7 +16,7 @@ function Profile() {
     const fetchStats = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/profile/${user.id}`
+          `https://collegehub-qcr1.onrender.com/api/profile/${user.id}`
         );
 
         setStats(res.data);

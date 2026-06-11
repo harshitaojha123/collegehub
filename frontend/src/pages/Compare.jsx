@@ -41,13 +41,13 @@ function Compare() {
       }
 
       await axios.post(
-        "http://localhost:5000/api/compare",
-        {
-          userId: user.id,
-          college1Id: Number(college1),
-          college2Id: Number(college2),
-        }
-      );
+  "https://collegehub-qcr1.onrender.com/api/compare",
+  {
+    userId: user.id,
+    college1Id: Number(college1),
+    college2Id: Number(college2),
+  }
+);
 
       alert("Comparison saved successfully");
     } catch (error) {
