@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const cors = require("cors");
 
@@ -13,7 +15,7 @@ const app = express();
 
 app.use(cors({
   origin: [
-   "https://collegehub-sko3.vercel.app/"
+   "https://collegehub-sko3.vercel.app"
   ],
   credentials: true
 }));
