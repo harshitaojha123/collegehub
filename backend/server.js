@@ -13,12 +13,15 @@ const compareRoutes =
 
 const app = express();
 
-app.use(cors({
-  origin: [
-   "https://collegehub-sko3.vercel.app"
-  ],
-  credentials: true
-}));
+app.use(
+  cors({
+    origin: [
+      "https://collegehub-sko3.vercel.app",
+      "https://collegehub-sko3-git-main-harshita-ojhas-projects.vercel.app"
+    ],
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 app.get("/", (req, res) => {
