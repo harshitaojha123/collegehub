@@ -13,7 +13,7 @@ const app = express();
 
 app.use(cors({
   origin: [
-    "https://collegehub-rose.vercel.app"
+   "https://collegehub-sko3.vercel.app/"
   ],
   credentials: true
 }));
@@ -29,8 +29,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/compare", compareRoutes);
 app.use("/api/profile", profileRoutes);
 
-const PORT = 5000;
-
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on ${PORT}`);
 });
