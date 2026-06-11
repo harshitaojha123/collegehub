@@ -2,6 +2,7 @@ import MainLayout from "../layouts/MainLayout";
 import { useState, useEffect } from "react";
 import { getColleges } from "../services/collegeService";
 import axios from "axios";
+const API_URL = import.meta.env.VITE_API_URL;
 
 function Compare() {
   const [colleges, setColleges] = useState([]);
@@ -40,8 +41,8 @@ function Compare() {
         return;
       }
 
-      await axios.post(
-  "https://collegehub-qcr1.onrender.com/api/compare",
+     await axios.post(
+  `${API_URL}/api/compare`,
   {
     userId: user.id,
     college1Id: Number(college1),

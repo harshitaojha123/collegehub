@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import MainLayout from "../layouts/MainLayout";
+const API_URL = import.meta.env.VITE_API_URL;
 
 function Profile() {
   const user = JSON.parse(
@@ -15,9 +16,9 @@ function Profile() {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const res = await axios.get(
-          `https://collegehub-qcr1.onrender.com/api/profile/${user.id}`
-        );
+       const res = await axios.get(
+  `${API_URL}/api/profile/${user.id}`
+);
 
         setStats(res.data);
       } catch (error) {

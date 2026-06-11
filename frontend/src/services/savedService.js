@@ -1,7 +1,9 @@
 import axios from "axios";
 
+ const API_URL = import.meta.env.VITE_API_URL;
+
 const API = axios.create({
-  baseURL:  "https://collegehub-qcr1.onrender.com/api/saved",
+  baseURL: `${API_URL}/api/saved`,
 });
 
 export const saveCollege = (data) =>
